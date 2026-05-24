@@ -192,8 +192,8 @@ endif()
 
 install(TARGETS Kirigami ${_out_targets_1} ${_out_targets_2} EXPORT KirigamiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 install(EXPORT KirigamiTargets
-    DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Kirigami
-    FILE KF6KirigamiTargets.cmake
+	DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUI
+	FILE SonicFrameworksQuickUITargets.cmake
     NAMESPACE KF6
 )
 

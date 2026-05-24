@@ -13,8 +13,8 @@ deprecated: false
 release: true
 logo: logo.png
 libraries:
-    - cmake: KF6::Kirigami
-cmakename: KF6Kirigami
+    - cmake: SonicFrameworksQuickUI
+cmakename: SonicFrameworksQuickUI
 irc: kde-kirigami
 mailinglist: plasma-devel
 group: Frameworks

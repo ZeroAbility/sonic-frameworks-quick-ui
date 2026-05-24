@@ -70,7 +70,7 @@ ecm_qt_declare_logging_category(KirigamiPlatform
 ecm_setup_version(PROJECT
     VARIABLE_PREFIX KIRIGAMIPLATFORM
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigamiplatform_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiPlatformConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIPlatformConfigVersion.cmake"
     SOVERSION 6
 )
 
@@ -111,24 +111,24 @@ ecm_generate_headers(KirigamiPlatform_CamelCase_HEADERS
 )
 
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF6KirigamiPlatformConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiPlatformConfig.cmake"
-    INSTALL_DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiPlatform
+	"${CMAKE_CURRENT_SOURCE_DIR}/SonicFrameworksQuickUIPlatformConfig.cmake.in"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIPlatformConfig.cmake"
+	INSTALL_DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUIPlatform
     PATH_VARS CMAKE_INSTALL_PREFIX
 )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiPlatformConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiPlatformConfigVersion.cmake"
-    DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiPlatform
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIPlatformConfig.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIPlatformConfigVersion.cmake"
+	DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUIPlatform
     COMPONENT Devel
 )
 
 install(TARGETS KirigamiPlatform EXPORT KF6KirigamiPlatformTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(EXPORT KF6KirigamiPlatformTargets
-    DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6KirigamiPlatform
-    FILE KF6KirigamiPlatformTargets.cmake
+	DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUIPlatform
+	FILE SonicFrameworksQuickUIPlatformTargets.cmake
     NAMESPACE KF6::
 )
 

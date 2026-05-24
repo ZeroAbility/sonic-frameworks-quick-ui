@@ -13,7 +13,7 @@ endif()
 
 find_dependency(KF6KirigamiPlatform @PROJECT_VERSION@)
 
-include("${CMAKE_CURRENT_LIST_DIR}/KF6KirigamiTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/SonicFrameworksQuickUITargets.cmake")
 
 if (NOT TARGET KF6::Kirigami AND TARGET KF6Kirigami)
     add_library(KF6::Kirigami ALIAS KF6Kirigami)
@@ -21,4 +21,4 @@ endif()
 
 set(Kirigami_INSTALL_PREFIX "@PACKAGE_CMAKE_INSTALL_PREFIX@")
 
-include("${CMAKE_CURRENT_LIST_DIR}/KF6KirigamiMacros.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/SonicFrameworksQuickUIMacros.cmake")

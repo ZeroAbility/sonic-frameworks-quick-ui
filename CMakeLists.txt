@@ -79,18 +79,18 @@ include(ECMQmlModule)
 include(ECMDeprecationSettings)
 include(ECMGenerateQDoc)
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Kirigami")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUI")
 
 ecm_setup_version(PROJECT
     VARIABLE_PREFIX KIRIGAMI
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kirigami_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIConfigVersion.cmake"
     SOVERSION 6
 )
 
 ecm_setup_version(PROJECT
     VARIABLE_PREFIX KIRIGAMI
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6Kirigami2ConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUI2ConfigVersion.cmake"
     SOVERSION 6
 )
 
@@ -151,31 +151,31 @@ if (BUILD_TESTING)
 endif()
 
 configure_package_config_file(
-    "KF6KirigamiConfig.cmake.in"
-    "KF6KirigamiConfig.cmake"
+	"SonicFrameworksQuickUIConfig.cmake.in"
+	"SonicFrameworksQuickUIConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     PATH_VARS CMAKE_INSTALL_PREFIX
 )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6KirigamiConfigVersion.cmake"
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF6KirigamiMacros.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIConfig.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUIConfigVersion.cmake"
+	"${CMAKE_CURRENT_SOURCE_DIR}/SonicFrameworksQuickUIMacros.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
 
 configure_package_config_file(
-    "KF6Kirigami2Config.cmake.in"
-    "KF6Kirigami2Config.cmake"
-    INSTALL_DESTINATION "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Kirigami2"
+	"SonicFrameworksQuickUI2Config.cmake.in"
+	"SonicFrameworksQuickUI2Config.cmake"
+	INSTALL_DESTINATION "${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUI2"
     PATH_VARS CMAKE_INSTALL_PREFIX
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/KF6Kirigami2Config.cmake
-    "${CMAKE_CURRENT_BINARY_DIR}/KF6Kirigami2ConfigVersion.cmake"
-    DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Kirigami2
+	FILES ${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUI2Config.cmake
+    "${CMAKE_CURRENT_BINARY_DIR}/SonicFrameworksQuickUI2ConfigVersion.cmake"
+    DESTINATION ${KDE_INSTALL_CMAKEPACKAGEDIR}/SonicFrameworksQuickUI2
     COMPONENT Devel
 )
 
